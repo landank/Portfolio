@@ -9,4 +9,4 @@ Screenshot of the initial page.
 
 Live site:
 
-https://landank.github.io/portfolio/
+https://landank.github.io/Portfolio/
