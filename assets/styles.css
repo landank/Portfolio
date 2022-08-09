@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #7E746B;
+    --secondary-color: #133439;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--primary-color);
+}
+
+.section-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px 40px;
+    margin: 0 auto 30px auto;
+    font-size: 45px;
+    border-bottom: 2px solid #7C422E;
+    width: fit-content;
+    text-align: center;
+    color: #133439;
+}
+
+/*---------------header---------------*/
+
+header, section {
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-image: url("../assets/images/hero.jpg");
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+
+header h1 {
+    color: #406365;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 30px;
+}
+
+header a:visited, header a:link {
+    color: #D5C8C2;
+}
+
+header a {
+    text-decoration: none;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.50);
+}
+
+header a:hover {
+    color: var(--secondary-color);
+}
+
+header nav ul li {
+    color: var(--primary-color);
+    padding: 10px;
+    margin: 0 50px;
+    font-weight: bold;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+}
+
+/*---------------about me---------------*/
+
+.about-text p {
+    color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/*---------------content---------------*/
+
+.projects {
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-project img, .project img {
+    max-width: 100%;
+    border: 3px solid var(--secondary-color);
+    border-radius: 32px 0 32px ;
+}
+
+.main-project {
+    margin: 0 0 40px 0;
+}
+
+.project {
+    margin: 0 0 20px 0;
+}
+
+.project-head {
+    width: fit-content;
+    background-color: var(--secondary-color);
+    color: #D5C8C2;
+    padding: 10px;
+    border-radius: 32px 0 32px 0;
+    margin: 20px;
+}
+
+/*******************PROJECTS***********************/
+
+.contact ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.contact ul li {
+    padding: 10px;
+    margin: 0 50px;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.contact a:visited, .contact a:link {
+    color: var(--secondary-color);
+}
+
+.contact ul li:hover, .contact a:hover {
+    color: #D5C8C2;
+}
+
+/*--------------media--------------------*/
+/*--------tablets and larger--------------*/
+@media screen and (min-width: 575px) {
+    
+    .about-text p {
+        width: 80%;
+    }
+
+    .main-project img, .project img {
+        border: 5px solid var(--secondary-color);
+    }
+}
+
+/*------------phones---------------*/
+@media screen and (min-width: 975px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    header nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .section-title {
+        border-bottom: none;
+        border-right: 5px solid #A75A3E;
+        width: 25%;
+        text-align: right;
+        margin-right: 10px;
+        padding-right: 10px;
+    }
+
+    .about, .stuff, .contact {
+        display: flex;
+    }
+
+    .about div, .projects, .contact ul {
+        width: 75%;
+    }
+
+    .projects {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-project {
+        flex: 2 100%;
+    }
+
+    .project {
+        flex: 1 45%;
+        max-width: 45%;
+    }
+
+    .main-project img:hover, .project img:hover {
+        opacity: 0.75;
+    }
+    
+    .contact ul {
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 30px;
+    }
+
+}
